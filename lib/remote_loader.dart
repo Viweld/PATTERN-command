@@ -14,9 +14,9 @@ import 'business_logic/commands/light_on_command.dart';
 import 'devices/ceiling_fan.dart';
 import 'devices/stereo.dart';
 
-class DataInjector extends InheritedWidget {
+class RemoteLoader extends InheritedWidget {
 
- late RemoteControll _remote;
+ static late RemoteController _remote;
 
   void initRemote() {
     Light livingRoomLight = Light(location: 'Спальня');
@@ -37,16 +37,16 @@ class DataInjector extends InheritedWidget {
     StereoOnCommand stereoOnWithCD = StereoOnCommand(stereo: stereo);
     StereoOffCommand stereoOff = StereoOffCommand(stereo: stereo);
 
-    _remote = RemoteControll();
+    _remote = RemoteController();
     _remote.setCommand(0, livingRoomLightOn, livingRoomLightOff);
     _remote.setCommand(1, kitchenLightOn, kitchenLightOff);
     _remote.setCommand(2, ceilingFanOn, ceilingFanOff);
     _remote.setCommand(3, stereoOnWithCD, stereoOff);
   }
 
-  RemoteControll get remoteControler => _remote;
+  RemoteController get remoteControler => _remote;
 
-  DataInjector({
+  const RemoteLoader({
     required Widget child,
     Key? key,
   }) : super(
@@ -54,8 +54,8 @@ class DataInjector extends InheritedWidget {
           child: child,
         );
 
-  static DataInjector? of(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<DataInjector>();
+  static RemoteLoader? of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<RemoteLoader>();
 
   @override
   bool updateShouldNotify(covariant InheritedWidget oldWidget) {

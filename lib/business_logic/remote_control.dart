@@ -3,12 +3,12 @@ import 'package:remote_controller/business_logic/command.dart';
 import 'commands/no_command.dart';
 
 ///Класс пульта управления на 7 слотов
-class RemoteControll {
+class RemoteController {
   List<Command> _onCommands = [];
   List<Command> _offCommands = [];
 
   ///Конструктор, создающий экземпляр пульта на 7 слотов
-  RemoteControll() {
+  RemoteController() {
     for (int i = 0; i < 7; i++) {
       _onCommands.add(NoCommand());
       _offCommands.add(NoCommand());

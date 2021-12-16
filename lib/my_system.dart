@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:remote_controller/data_injector.dart';
+import 'package:remote_controller/remote_loader.dart';
 import 'package:remote_controller/indicators.dart';
 import 'package:remote_controller/remote_controller.dart';
 
@@ -16,7 +16,7 @@ class _MySystemState extends State<MySystem> {
   @override
   void didChangeDependencies() {
     if(!isInit){
-      DataInjector.of(context)?.initRemote();
+      RemoteLoader.of(context)?.initRemote();
       isInit=true;
     }
     super.didChangeDependencies();
@@ -24,7 +24,7 @@ class _MySystemState extends State<MySystem> {
 
   @override
   Widget build(BuildContext context) {
-    final remoteController = DataInjector.of(context)!.remoteControler;
+    final remoteController = RemoteLoader.of(context)!.remoteControler;
 
     return Scaffold(
       appBar: AppBar(

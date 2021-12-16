@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
-import 'package:remote_controller/data_injector.dart';
+import 'package:remote_controller/remote_loader.dart';
 import 'package:remote_controller/my_system.dart';
 
 Logger log = Logger(
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DataInjector(
+    return RemoteLoader(
       child: MaterialApp(
         theme: ThemeData(
           primarySwatch: Colors.blue,
