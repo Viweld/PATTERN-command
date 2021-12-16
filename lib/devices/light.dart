@@ -22,6 +22,6 @@ class Light {
 
   void off() {
     _isIlluminated = false;
-    log.d('$_location. Включился свет.');
+    log.d('$_location. Выключился свет.');
   }
 }

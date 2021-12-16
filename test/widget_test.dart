@@ -6,10 +6,10 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:remote_controller/indicators.dart';
+import 'package:remote_controller/widgets/indicators.dart';
 import 'package:remote_controller/main.dart';
-import 'package:remote_controller/my_system.dart';
-import 'package:remote_controller/remote_controller.dart';
+import 'package:remote_controller/my_system_screen.dart';
+import 'package:remote_controller/widgets/remote_controller.dart';
 
 void main() {
   testWidgets('1. тест MyApp - НАЛИЧИЕ', (WidgetTester tester) async {
@@ -21,7 +21,7 @@ void main() {
   testWidgets('2. тест MySystem - НАЛИЧИЕ', (WidgetTester tester) async {
     final root = MyApp();
     await tester.pumpWidget(root);
-    expect(find.byType(MySystem),findsOneWidget);
+    expect(find.byType(MySystemScreen),findsOneWidget);
 
   });
 

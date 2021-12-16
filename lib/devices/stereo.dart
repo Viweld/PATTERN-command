@@ -8,24 +8,31 @@ enum AudioSource {
 
 class Stereo {
   int _volume;
+  bool _isOn;
   AudioSource _audioSource;
 
   Stereo({
     int? speed,
+    bool? isOn,
     AudioSource? audioSource,
   })  : _audioSource = audioSource ?? AudioSource.radio,
-        _volume = speed ?? 0;
+        _volume = speed ?? 0,
+        _isOn = isOn ?? false;
+
+  bool get isOn => _isOn;
 
   int get volume => _volume;
 
-  String get audioSource => _audioSource.toString();
+  AudioSource get audioSource => _audioSource;
 
   void on() {
+    _isOn=true;
     log.d('Где-то тихо щелкнуло');
   }
 
   void off() {
     _volume = 0;
+    _isOn=false;
     log.d('Стало совсем тихо...');
   }
 
@@ -60,15 +67,17 @@ class Stereo {
         break;
     }
 
-    if (_volume == 0) {
+    if (_volume <= 0) {
       log.d('Стало совсем тихо...');
     } else if (_volume < 10) {
       log.d('Зазвучал $sourseMsg');
     } else if (_volume >= 10 && _volume < 20) {
       log.d('Вас оглушил $sourseMsg');
-    } else if (_volume >= 10 && _volume < 20) {
-      log.e(
+    } else if (_volume >= 20 && _volume < 30) {
+      log.w(
           'От внезапного рева треснуло окно. На весь дом орал, разрывая ваши барабанные перепонки $sourseMsg');
+    } else {
+      log.w('Вокруг очень шумно, но громче уже не делается');
     }
   }
 }

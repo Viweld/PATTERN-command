@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
-import 'package:remote_controller/remote_loader.dart';
-import 'package:remote_controller/my_system.dart';
+import 'package:remote_controller/widgets/remote_loader.dart';
+import 'package:remote_controller/my_system_screen.dart';
 
 Logger log = Logger(
   printer: PrettyPrinter(),
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const MySystem(),
+        home: const MySystemScreen(),
       ),
     );
   }

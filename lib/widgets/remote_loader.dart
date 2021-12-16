@@ -8,11 +8,11 @@ import 'package:remote_controller/business_logic/remote_control.dart';
 import 'package:remote_controller/devices/garage_door.dart';
 import 'package:remote_controller/devices/light.dart';
 
-import 'business_logic/commands/ceiling_fan_off_command.dart';
-import 'business_logic/commands/garage_dor_down_command.dart';
-import 'business_logic/commands/light_on_command.dart';
-import 'devices/ceiling_fan.dart';
-import 'devices/stereo.dart';
+import '../business_logic/commands/ceiling_fan_off_command.dart';
+import '../business_logic/commands/garage_dor_down_command.dart';
+import '../business_logic/commands/light_on_command.dart';
+import '../devices/ceiling_fan.dart';
+import '../devices/stereo.dart';
 
 class RemoteLoader extends InheritedWidget {
 

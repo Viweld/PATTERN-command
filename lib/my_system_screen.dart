@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:remote_controller/remote_loader.dart';
-import 'package:remote_controller/indicators.dart';
-import 'package:remote_controller/remote_controller.dart';
+import 'package:remote_controller/widgets/remote_loader.dart';
+import 'package:remote_controller/widgets/indicators.dart';
+import 'package:remote_controller/widgets/remote_controller.dart';
 
-class MySystem extends StatefulWidget {
-  const MySystem({Key? key}) : super(key: key);
+class MySystemScreen extends StatefulWidget {
+  const MySystemScreen({Key? key}) : super(key: key);
 
   @override
-  State<MySystem> createState() => _MySystemState();
+  State<MySystemScreen> createState() => _MySystemScreenState();
 }
 
-class _MySystemState extends State<MySystem> {
+class _MySystemScreenState extends State<MySystemScreen> {
   bool isInit = false;
 
   @override
   void didChangeDependencies() {
-    if(!isInit){
+    if (!isInit) {
       RemoteLoader.of(context)?.initRemote();
-      isInit=true;
+      isInit = true;
     }
     super.didChangeDependencies();
   }
@@ -39,7 +39,8 @@ class _MySystemState extends State<MySystem> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () => remoteController.onButtonWasPushed(1)),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () => remoteController.onButtonWasPushed(1)),
     );
   }
 }
