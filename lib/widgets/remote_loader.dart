@@ -4,7 +4,7 @@ import 'package:remote_controller/business_logic/commands/garage_dor_up_command.
 import 'package:remote_controller/business_logic/commands/light_off_command.dart';
 import 'package:remote_controller/business_logic/commands/stereo_off_command.dart';
 import 'package:remote_controller/business_logic/commands/stereo_on_command.dart';
-import 'package:remote_controller/business_logic/remote_control.dart';
+import 'package:remote_controller/business_logic/remote_controller.dart';
 import 'package:remote_controller/devices/garage_door.dart';
 import 'package:remote_controller/devices/light.dart';
 
@@ -44,7 +44,7 @@ class RemoteLoader extends InheritedWidget {
     _remote.setCommand(3, stereoOnWithCD, stereoOff);
   }
 
-  RemoteController get remoteControler => _remote;
+  RemoteController get remoteController => _remote;
 
   const RemoteLoader({
     required Widget child,

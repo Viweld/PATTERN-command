@@ -4,12 +4,14 @@ import 'commands/no_command.dart';
 
 ///Класс пульта управления на 7 слотов
 class RemoteController {
+  static const _slotsCount = 7;
   List<Command> _onCommands = [];
   List<Command> _offCommands = [];
 
+  int get slotsCount => _slotsCount;
   ///Конструктор, создающий экземпляр пульта на 7 слотов
   RemoteController() {
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < _slotsCount; i++) {
       _onCommands.add(NoCommand());
       _offCommands.add(NoCommand());
     }

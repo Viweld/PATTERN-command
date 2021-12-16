@@ -4,7 +4,7 @@ import 'package:mockito/mockito.dart';
 import 'package:remote_controller/business_logic/command.dart';
 import 'package:remote_controller/business_logic/commands/light_off_command.dart';
 import 'package:remote_controller/business_logic/commands/light_on_command.dart';
-import 'package:remote_controller/business_logic/remote_control.dart';
+import 'package:remote_controller/business_logic/remote_controller.dart';
 import 'package:remote_controller/devices/light.dart';
 import 'package:test/test.dart';
 
