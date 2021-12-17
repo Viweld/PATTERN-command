@@ -1,5 +1,6 @@
-import 'package:remote_controller/business_logic/command.dart';
-import 'package:remote_controller/devices/ceiling_fan.dart';
+
+import 'package:remote_controller/domain/command.dart';
+import 'package:remote_controller/domain/entities/ceiling_fan.dart';
 
 class CeilingFanHighCommand implements Command {
   static late int _prevSpeed;

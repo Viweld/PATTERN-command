@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:remote_controller/widgets/remote_loader.dart';
-import 'package:remote_controller/widgets/indicators_view.dart';
-import 'package:remote_controller/widgets/remote_controller_view.dart';
+import 'package:remote_controller/presentation/widgets/indicators_view.dart';
+import 'package:remote_controller/presentation/widgets/remote_controller_view.dart';
+import 'package:remote_controller/presentation/widgets/remote_loader.dart';
 
 class MySystemScreen extends StatefulWidget {
   const MySystemScreen({Key? key}) : super(key: key);

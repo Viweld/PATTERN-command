@@ -1,7 +1,7 @@
-import 'package:remote_controller/devices/ceiling_fan.dart';
-import 'package:remote_controller/devices/garage_door.dart';
-import 'package:remote_controller/devices/light.dart';
-import 'package:remote_controller/devices/stereo.dart';
+import 'package:remote_controller/domain/entities/ceiling_fan.dart';
+import 'package:remote_controller/domain/entities/garage_door.dart';
+import 'package:remote_controller/domain/entities/light.dart';
+import 'package:remote_controller/domain/entities/stereo.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:remote_controller/widgets/remote_loader.dart';
+import 'package:remote_controller/presentation/widgets/remote_loader.dart';
 
 class RemoteControllerView extends StatelessWidget {
   const RemoteControllerView({Key? key}) : super(key: key);

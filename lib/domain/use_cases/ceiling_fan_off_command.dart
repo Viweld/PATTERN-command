@@ -1,20 +1,21 @@
-import 'package:remote_controller/business_logic/command.dart';
-import 'package:remote_controller/devices/ceiling_fan.dart';
 
-class CeilingFanMediumCommand implements Command {
+import 'package:remote_controller/domain/command.dart';
+import 'package:remote_controller/domain/entities/ceiling_fan.dart';
+
+class CeilingFanOffCommand implements Command {
   static late int _prevSpeed;
   final CeilingFan _fan;
 
-  CeilingFanMediumCommand({
+  CeilingFanOffCommand({
     required CeilingFan fan,
-  }) : _fan = fan {
+  }) : _fan = fan{
     _prevSpeed = _fan.getSpeed;
   }
 
   @override
   void execute() {
     _prevSpeed = _fan.getSpeed;
-    _fan.medium();
+    _fan.off();
   }
 
   @override

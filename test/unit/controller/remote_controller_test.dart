@@ -1,8 +1,8 @@
-import 'package:remote_controller/business_logic/commands/light_off_command.dart';
-import 'package:remote_controller/business_logic/commands/light_on_command.dart';
-import 'package:remote_controller/business_logic/commands/no_command.dart';
-import 'package:remote_controller/business_logic/remote_controller.dart';
-import 'package:remote_controller/devices/light.dart';
+import 'package:remote_controller/domain/entities/light.dart';
+import 'package:remote_controller/domain/remote_controller.dart';
+import 'package:remote_controller/domain/use_cases/light_off_command.dart';
+import 'package:remote_controller/domain/use_cases/light_on_command.dart';
+import 'package:remote_controller/domain/use_cases/no_command.dart';
 import 'package:test/test.dart';
 
 void main() {

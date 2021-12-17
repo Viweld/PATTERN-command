@@ -1,4 +1,4 @@
-import 'package:remote_controller/business_logic/command.dart';
+import 'package:remote_controller/domain/command.dart';
 import 'package:remote_controller/main.dart';
 
 class NoCommand implements Command{

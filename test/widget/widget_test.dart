@@ -1,16 +1,9 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility that Flutter provides. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:remote_controller/widgets/indicators_view.dart';
 import 'package:remote_controller/main.dart';
-import 'package:remote_controller/my_system_screen.dart';
-import 'package:remote_controller/widgets/remote_controller_view.dart';
+import 'package:remote_controller/presentation/my_system_screen.dart';
+import 'package:remote_controller/presentation/widgets/indicators_view.dart';
+import 'package:remote_controller/presentation/widgets/remote_controller_view.dart';
 
 void main() {
   testWidgets('1. тест MyApp - НАЛИЧИЕ', (WidgetTester tester) async {

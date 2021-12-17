@@ -1,5 +1,6 @@
-import 'package:remote_controller/business_logic/command.dart';
-import 'package:remote_controller/devices/stereo.dart';
+
+import 'package:remote_controller/domain/command.dart';
+import 'package:remote_controller/domain/entities/stereo.dart';
 
 class StereoOffCommand implements Command {
   static late bool _prevState;

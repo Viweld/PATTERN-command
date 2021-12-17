@@ -1,5 +1,5 @@
-import 'package:remote_controller/business_logic/command.dart';
-import 'package:remote_controller/devices/garage_door.dart';
+import 'package:remote_controller/domain/command.dart';
+import 'package:remote_controller/domain/entities/garage_door.dart';
 
 class GarageDoorUpCommand implements Command {
   static late bool _prevState;

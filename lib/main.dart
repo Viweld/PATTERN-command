@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
-import 'package:remote_controller/widgets/remote_loader.dart';
-import 'package:remote_controller/my_system_screen.dart';
+import 'package:remote_controller/presentation/widgets/remote_loader.dart';
+import 'package:remote_controller/presentation/my_system_screen.dart';
 
 Logger log = Logger(
   printer: PrettyPrinter(),

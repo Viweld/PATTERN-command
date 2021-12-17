@@ -1,6 +1,6 @@
-import 'package:remote_controller/business_logic/command.dart';
+import 'package:remote_controller/domain/command.dart';
+import 'package:remote_controller/domain/use_cases/no_command.dart';
 
-import 'commands/no_command.dart';
 
 ///Класс пульта управления на 7 слотов
 class RemoteController {
