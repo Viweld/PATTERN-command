@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:remote_controller/business_logic/commands/ceiling_fan_on_command.dart';
-import 'package:remote_controller/business_logic/commands/garage_dor_up_command.dart';
+import 'package:remote_controller/business_logic/commands/ceiling_fan_high_command.dart';
+import 'package:remote_controller/business_logic/commands/garage_door_up_command.dart';
 import 'package:remote_controller/business_logic/commands/light_off_command.dart';
 import 'package:remote_controller/business_logic/commands/stereo_off_command.dart';
-import 'package:remote_controller/business_logic/commands/stereo_on_command.dart';
+import 'package:remote_controller/business_logic/commands/stereo_on_with_cd_command.dart';
 import 'package:remote_controller/business_logic/remote_controller.dart';
 import 'package:remote_controller/devices/garage_door.dart';
 import 'package:remote_controller/devices/light.dart';
 
 import '../business_logic/commands/ceiling_fan_off_command.dart';
-import '../business_logic/commands/garage_dor_down_command.dart';
+import '../business_logic/commands/garage_door_down_command.dart';
 import '../business_logic/commands/light_on_command.dart';
 import '../devices/ceiling_fan.dart';
 import '../devices/stereo.dart';
@@ -29,12 +29,12 @@ class RemoteLoader extends InheritedWidget {
         LightOffCommand(light: livingRoomLight);
     LightOnCommand kitchenLightOn = LightOnCommand(light: kitchenLight);
     LightOffCommand kitchenLightOff = LightOffCommand(light: kitchenLight);
-    CeilingFanOnCommand ceilingFanOn = CeilingFanOnCommand(fan: ceilingFan);
+    CeilingFanHighCommand ceilingFanOn = CeilingFanHighCommand(fan: ceilingFan);
     CeilingFanOffCommand ceilingFanOff = CeilingFanOffCommand(fan: ceilingFan);
     GarageDoorUpCommand garageDoorUp = GarageDoorUpCommand(door: garageDoor);
     GarageDoorDownCommand garageDoorDown =
         GarageDoorDownCommand(door: garageDoor);
-    StereoOnCommand stereoOnWithCD = StereoOnCommand(stereo: stereo);
+    StereoOnWithCDCommand stereoOnWithCD = StereoOnWithCDCommand(stereo: stereo);
     StereoOffCommand stereoOff = StereoOffCommand(stereo: stereo);
 
     _remote = RemoteController();

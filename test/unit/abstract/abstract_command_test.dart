@@ -10,5 +10,6 @@ void main(){
 
   test('Тестирование абстрактного класса', (){
     command.execute();
+    command.undo();
   });
 }

@@ -3,7 +3,7 @@ import 'package:remote_controller/main.dart';
 class Light {
   bool _isIlluminated;
 
-  String _location;
+  final String _location;
 
   Light({
     required String location,

@@ -5,6 +5,7 @@ void main() {
   test('Тестирование null-object - команды', (){
     final noCommand = NoCommand();
     noCommand.execute();
+    noCommand.undo();
   });
 }
 

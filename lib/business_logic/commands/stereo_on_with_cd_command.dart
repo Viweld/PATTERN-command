@@ -1,14 +1,14 @@
 import 'package:remote_controller/business_logic/command.dart';
 import 'package:remote_controller/devices/stereo.dart';
 
-class StereoOffCommand implements Command {
+class StereoOnWithCDCommand implements Command {
   static late bool _prevState;
   static late int _prevVol;
   static late AudioSource _prevSource;
 
   final Stereo _stereo;
 
-  StereoOffCommand({
+  StereoOnWithCDCommand({
     required Stereo stereo,
   }) : _stereo = stereo {
     _prevState = _stereo.isOn;
@@ -21,7 +21,9 @@ class StereoOffCommand implements Command {
     _prevState = _stereo.isOn;
     _prevVol = _stereo.volume;
     _prevSource = _stereo.audioSource;
-    _stereo.off();
+    _stereo.on();
+    _stereo.setCd();
+    _stereo.setVolume(11);
   }
 
   @override
